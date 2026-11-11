@@ -20,13 +20,13 @@
 // ----------------------------------------------------------------
 
     //  Arduino Mega
-    //#define encoder0PinA  2                   // Rotary encoder gpio pin
-    //#define encoder0PinB  3                   // Rotary encoder gpio pin
+    //#define encoder0PinA  3                   // Rotary encoder gpio pin
+    //#define encoder0PinB  2                   // Rotary encoder gpio pin
     //#define encoder0Press 4                   // Rotary encoder button gpio pin
 
     //  ESP32
-      #define encoder0PinA  25                   // Rotary encoder gpio pin ESP32
-      #define encoder0PinB  26                   // Rotary encoder gpio pin ESP32
+      #define encoder0PinA  26                   // Rotary encoder gpio pin ESP32
+      #define encoder0PinB  25                   // Rotary encoder gpio pin ESP32
       #define encoder0Press 27                   // Rotary encoder button gpio pin ESP32
 
       #define OLEDC 0                           // oled clock pin (set to 0 for default)
