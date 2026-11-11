@@ -20,9 +20,15 @@
 // ----------------------------------------------------------------
 
     //  Arduino Mega
-      #define encoder0PinA  2                   // Rotary encoder gpio pin
-      #define encoder0PinB  3                   // Rotary encoder gpio pin
-      #define encoder0Press 4                   // Rotary encoder button gpio pin
+    //#define encoder0PinA  2                   // Rotary encoder gpio pin
+    //#define encoder0PinB  3                   // Rotary encoder gpio pin
+    //#define encoder0Press 4                   // Rotary encoder button gpio pin
+
+    //  ESP32
+      #define encoder0PinA  25                   // Rotary encoder gpio pin ESP32
+      #define encoder0PinB  26                   // Rotary encoder gpio pin ESP32
+      #define encoder0Press 27                   // Rotary encoder button gpio pin ESP32
+
       #define OLEDC 0                           // oled clock pin (set to 0 for default)
       #define OLEDD 0                           // oled data pin
       #define OLEDE 0                           // oled enable pin
@@ -137,7 +143,7 @@ const uint8_t PROGMEM frame0[1024] = {
   0x00, 0x00, 0x00, 0x00, 0x00, 0x40, 0x10, 0x03, 0xff, 0xff, 0xff, 0x8e, 0x40, 0x00, 0x00, 0x00,
   0x00, 0x00, 0x00, 0x00, 0x20, 0x00, 0x00, 0x03, 0xff, 0xff, 0xff, 0x8c, 0x60, 0x00, 0x00, 0x00
 };
-// 
+// Using Free PNG to Matrix display converter
 // Website : https://www.oledanimationmaker.com/
 // Author :- Ashish ( ashish_y_794 )
 // -------------------------------------------------------------------------------------------------
@@ -306,10 +312,10 @@ void CMenu() {
 void CMenu2() {
   resetMenu();                          // clear any previous menu
   menuMode = menu;                      // enable menu mode
-  oledMenu.noOfmenuItems = 16;           // set the number of items in this menu
+  oledMenu.noOfmenuItems = 9;           // set the number of items in this menu
   oledMenu.menuTitle = "C cont";     // menus title (used to identify it)
   oledMenu.menuItems[1] = "Bank of Berne";
-  oledMenu.menuItems[2] = "Bank of Zurick";
+  oledMenu.menuItems[2] = "Bank of Zurich";
   oledMenu.menuItems[3] = "Chiba City";
   oledMenu.menuItems[4] = "Fuji Electric";
   oledMenu.menuItems[5] = "Holy Joystick";
@@ -331,7 +337,7 @@ void menuActions() {
       AMenu();
     }
     if (oledMenu.menuTitle == "Neuromancer 88" && oledMenu.selectedMenuItem == 2) {
-      displayMessage("","Evan Nordquist \n2016");
+      displayMessage("","\n2026\ngithub.com/ekn394/\nNeuromancer-88-PAX-Decoder/");
     }
   }
 
