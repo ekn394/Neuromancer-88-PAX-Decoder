@@ -793,13 +793,15 @@ void loop() {
 
   reUpdateButton();      // update rotary encoder button status (if pressed activate default menu)
   menuUpdate();          // update or action the oled menu
-
+  
+  /*
   // flash onboard led
     static uint32_t ledTimer = millis();
     if ( (unsigned long)(millis() - ledTimer) > 500 ) {
       digitalWrite(iLED, !digitalRead(iLED));
       ledTimer = millis();
     }
+  */
 }  // loop
 
 
